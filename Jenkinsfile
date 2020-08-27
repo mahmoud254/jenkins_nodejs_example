@@ -9,7 +9,7 @@ pipeline {
         }
         stage('push') {
             steps {
-                withCredentials([usernamePassword(credentialsId:"docker",usernameVariable:USERNAME,passwordVariable:PASSWORD)]){
+                withCredentials([usernamePassword(credentialsId:"docker",usernameVariable:"USERNAME",passwordVariable:"PASSWORD")]){
                 sh 'docker login --username $USERNAME --password $PASSWORD'
                 sh 'docker push mahmom/jenkins_node:v1.0'
             }
