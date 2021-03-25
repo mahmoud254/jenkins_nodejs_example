@@ -1,0 +1,18 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: docker login
+      run: docker login -u "${DOCKER_USERNAME}" -P "${DOCKER_PASSWORD}"
+    - name: Build the Docker image
+      run: docker build . -f Dockerfile --tag mahmom/jenkins_sprints:$(date +%s)
