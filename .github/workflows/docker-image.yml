@@ -13,6 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: docker login
-      run: docker login -u "${DOCKER_USERNAME}" -P "${DOCKER_PASSWORD}"
+      run: docker login -u "${DOCKER_USERNAME}" -p "${DOCKER_PASSWORD}"
     - name: Build the Docker image
       run: docker build . -f Dockerfile --tag mahmom/jenkins_sprints:$(date +%s)
