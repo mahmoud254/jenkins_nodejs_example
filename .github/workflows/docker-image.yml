@@ -16,3 +16,5 @@ jobs:
       run: docker login -u "${DOCKER_USERNAME}" -p "${DOCKER_PASSWORD}"
     - name: Build the Docker image
       run: docker build . -f dockerfile --tag mahmom/jenkins_sprints:$(date +%s)
+    - name: push the Docker image
+      run: docker push mahmom/jenkins_sprints:$(date +%s)      
