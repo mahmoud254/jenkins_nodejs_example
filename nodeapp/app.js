@@ -22,7 +22,7 @@ connection.end();
 const redis = require('redis');
 const client = redis.createClient({
     host: process.env.REDIS_HOSTNAME,
-    port: REDIS_PORT,
+    port: process.env.REDIS_PORT,
 });
 
 client.on('error', err => {
@@ -38,4 +38,3 @@ app.get('/', (req, res) => {
   app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
   })
-test.uoryjm.ng.0001.use1.cache.amazonaws.com:6379
