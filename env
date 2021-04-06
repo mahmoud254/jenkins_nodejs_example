@@ -1,6 +1,7 @@
-RDS_HOSTNAME="test"
+RDS_HOSTNAME="terraform-20210406133638279600000001.co9ct4cxrfz3.eu-central-1.rds.amazonaws.com"
 RDS_USERNAME="admin"
 RDS_PASSWORD="12345678"
 RDS_PORT=3306
-REDIS_HOSTNAME="cluster-redis"
+
+REDIS_HOSTNAME="cluster-redis.i7gzu4.0001.euc1.cache.amazonaws.com"
 REDIS_PORT=6379
