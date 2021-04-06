@@ -13,14 +13,17 @@ app.get("/db", (req, res) => {
 
 connection.connect(function(err) {
   if (err) {
+	  console.log(err)
+	  console.error('Database connection failed: ' + err.stack);
 	  res.send("db connection failed")
-    console.error('Database connection failed: ' + err.stack);
+	 //return console.error('error: ' + err.message);
+    
     return;
  }
 	res.send("db connection successful");
   console.log('Connected to database.');
 
-connection.end();
+ connection.end();
 });})
 
 const redis = require('redis');
