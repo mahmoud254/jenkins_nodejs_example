@@ -20,7 +20,7 @@ connection.connect(function(err) {
 	res.send("db connection successful");
   console.log('Connected to database.');
 
-// connection.end();
+ connection.end();
 });})
 
 const redis = require('redis');
