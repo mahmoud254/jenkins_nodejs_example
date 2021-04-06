@@ -13,8 +13,9 @@ app.get("/db", (req, res) => {
 
 connection.connect(function(err) {
   if (err) {
+	  console.error('Database connection failed: ' + err.stack);
 	  res.send("db connection failed")
-    console.error('Database connection failed: ' + err.stack);
+    
     return;
  }
 	res.send("db connection successful");
