@@ -22,7 +22,7 @@ pipeline {
                    docker push mahmom/sprints_jenkins_course:latest
                 """
             }
-
+            }
         }        
     }
 }
