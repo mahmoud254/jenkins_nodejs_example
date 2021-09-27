@@ -23,6 +23,16 @@ pipeline {
                 """
             }
             }
-        }        
+        }     
+        stage('deployment') {
+            steps {
+                
+                // Get some code from a GitHub repository
+                sh"""
+                   docker run -d -p 3000:3000 mahmom/sprints_jenkins_course:latest
+                   """
+
+            }
+        }         
     }
 }
