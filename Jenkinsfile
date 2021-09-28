@@ -10,7 +10,7 @@ pipeline {
 
                 sh """
                 docker build . -f dockerfile -t mahmom/nagwa_jenkins:latest
-                docker login -u ${USERNAME} mahmom -p ${PASSWORD}
+                docker login -u ${USERNAME}  -p ${PASSWORD}
                 docker push mahmom/nagwa_jenkins:latest
                 
                 """
