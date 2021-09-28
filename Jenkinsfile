@@ -5,8 +5,6 @@ pipeline {
         stage('CI') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/mahmoud254/jenkins_nodejs_example.git'
-
                 // Run Maven on a Unix agent.
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
 
