@@ -4,7 +4,7 @@ pipeline {
         stage('Preparation') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/mahmoud254/jenkins_nodejs_example.git'
+                git 'https://github.com/osamamagdy/jenkins_nodejs_example.git'
             }
         }
         stage('Build') {
