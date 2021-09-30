@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                withCredentials([usernamePassword(credentialsId:"test",usernameVariable:"username",passwordVariable:"pass")]){
+                withCredentials([usernamePassword(credentialsId:"dockerhub",usernameVariable:"username",passwordVariable:"pass")]){
                 sh 'docker build . -t ${username}/jenkins_sprints:v1.0'
                 sh 'docker login -u ${username} -p ${pass}'
                 sh 'docker push ${username}/jenkins_sprints:v1.0'
