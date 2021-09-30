@@ -21,7 +21,7 @@ pipeline {
             steps{
                 withCredentials([usernamePassword(credentialsId:"dockerhub",usernameVariable:"username",passwordVariable:"pass")]){
                 
-                sh 'docker run -p 3000:3000 -d ${username}/jenkins_sprints:v1.0'
+                sh 'docker run -p 3000:3060 -d ${username}/jenkins_sprints:v1.0'
                 }
             }
             
