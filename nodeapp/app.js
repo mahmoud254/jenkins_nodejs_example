@@ -4,10 +4,10 @@ const app = express()
 const port = 3000
 
 var connection = mysql.createConnection({
-  host     : process.env.RDS_HOSTNAME,
-  user     : process.env.RDS_USERNAME,
-  password : process.env.RDS_PASSWORD,
-  port     : process.env.RDS_PORT
+  host     : process.env.DB_HOSTNAME,
+  user     : process.env.DB_USERNAME,
+  password : process.env.DB_PASSWORD,
+  port     : process.env.DB_PORT
 });
 app.get("/db", (req, res) => {
 
