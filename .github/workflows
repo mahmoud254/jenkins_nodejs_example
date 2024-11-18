@@ -3,7 +3,7 @@ name: 'CI'
 on:
   push:
     branches:
-      - '"isolution"'
+      - "isolution"
 
 env:
   PROJECT_ID: 'isolution-442111' 
